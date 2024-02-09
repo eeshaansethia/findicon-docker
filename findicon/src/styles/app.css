@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.app {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background-color: #0d0d0d;
+}
+
+.app-left {
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: #1a1a1a;
+    padding: 25px 10px;
+    border-right: 1px solid #333;
+    overflow: hidden;
+}
+
+.app-left-new-button {
+    background-color: transparent;
+    color: white;
+    padding: 0.8rem 1rem;
+    width: 100%;
+    border: 1.5px solid #333;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.8px;
+}
+
+.app-left-new-button:hover {
+    background-color: #333;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.app-left-prompts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 10px;
+}
+
+.app-left-prompt {
+    width: 100%;
+}
+
+.app-left-prompts-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white;
+    margin: 1rem 0;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.app-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 25px 10px;
+    width: 100%;
+    max-width: 100%;
+}
+
+.app-right-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.app-right-top-menu {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.app-left-top-menu {
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+}
+
+.app-right-name {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.8rem;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    align-self: flex-start;
+    margin-bottom: 0;
+}
+
+.app-right-name-image {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.app-right-name-image img {
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    object-fit: cover;
+}
+
+.app-right-main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.app-right-main-products {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    width: 100%;
+    padding: 1rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.app-right-main-products::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px #242424;
+    background-color: transparent;
+}
+
+.app-right-main-products::-webkit-scrollbar {
+    width: 5px;
+    background-color: transparent;
+}
+
+.app-right-main-products::-webkit-scrollbar-thumb {
+    background-color: #242424;
+}
+
+.app-right-search {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 49rem;
+    border: 0.5px solid #333;
+    border-radius: 10px;
+    background-color: #1a1a1a;
+    padding: 0 1rem;
+    padding-right: 0;
+}
+
+.app-right-search-input {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 49rem;
+    color: white;
+    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 0.8px;
+    background-color: transparent;
+    border: none;
+}
+
+.app-right-search-input:focus {
+    outline: none;
+}
+
+.app-right-search-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.app-right-bottom {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+}
+
+.app-right-main-icon-image {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .app {
+        flex-direction: column;
+    }
+
+    .app-left {
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        transition: 0.5s all ease;
+        height: 100vh;
+        z-index: 100;
+        max-width: 300px;
+    }
+
+    .app-left-top-menu {
+        display: block;
+    }
+
+    .app-left.active {
+        left: 0;
+        transition: 0.5s all ease;
+        height: 100vh;
+        z-index: 100;
+    }
+
+    .app-right {
+        width: 100%;
+        height: 100vh;
+        padding: 25px 10px;
+    }
+
+    .app-right-header {
+        justify-content: space-between;
+        padding: 0 1rem;
+    }
+
+    .app-right-top-menu {
+        display: block;
+    }
+}
+
+@media (max-width: 300px) {
+    .app-right-header {
+        padding: 0 0.5rem;
+    }
+}

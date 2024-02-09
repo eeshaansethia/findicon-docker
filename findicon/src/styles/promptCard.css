@@ -1,0 +1,67 @@
+.prompt-card {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 10px;
+    transition: 0.3s all ease;
+    gap: 10px;
+}
+
+.prompt-card:hover {
+    background-color: #333;
+    cursor: pointer;
+    transition: 0.3s all ease;
+}
+
+.prompt-card-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex: 8;
+}
+
+.prompt-card-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    border-radius: 10px;
+    flex: 1;
+}
+
+.prompt-card-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: white !important;
+    margin: 0 !important;
+    text-align: left;
+    flex: 8;
+}
+
+
+.prompt-card-delete {
+    background-color: transparent;
+    color: white;
+    border: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.prompt-card-delete:hover {
+    background-color: white;
+    border-radius: 50%;
+    color: #333;
+    transition: all 0.3s ease;
+}

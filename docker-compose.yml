@@ -1,0 +1,50 @@
+version: "3"
+services:
+  database:
+    image: mongo
+    ports:
+      - 27017:27017
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - findicon-app-network
+    container_name: database
+
+  backend:
+    build:
+      context: ./server
+      dockerfile: DockerFile
+    ports:
+      - 3001:3001
+    env_file:
+      - ./server/.env
+    depends_on:
+      - database
+    restart: always
+    networks:
+      - findicon-app-network
+    container_name: server
+    volumes:
+      - ./server:/app
+
+  frontend:
+    build:
+      context: ./findicon
+      dockerfile: DockerFile
+    depends_on:
+      - backend
+    ports:
+      - 3000:3000
+    env_file:
+      - ./findicon/.env
+    networks:
+      - findicon-app-network
+    container_name: findicon
+    volumes:
+      - ./findicon:/app
+
+networks:
+  findicon-app-network:
+
+volumes:
+  mongo-data:
