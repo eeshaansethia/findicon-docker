@@ -12,6 +12,8 @@ Findicon is an AI tool that helps you generate icons for products you entered in
 
 [Backend Github Repository](https://github.com/eeshaansethia/findicon-server)
 
+### Note: It takes some time for the backend server to start on Render because it runs on a free plan; please be patient. It will eventually, for sure.
+
 # Installation for Individual Repositories
 1. For Frontend, React has been used. After cloning the repository, create a ```.env``` file in the project's root folder. 
 ```.env
